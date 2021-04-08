@@ -1,52 +1,51 @@
-import { render } from '@testing-library/react';
 import react, { Component, setState } from 'react';
 
 export default class Piano extends Component {
     state = {
-        keys: '',
         keyArray: [],
 
     }
-    handleChange = (event, i) => {
-        this.setState({ keyArray: event.target.value })
+    //adds to the end of the keyArray that stores the keys on the piano that have been pressed
+    updateKey = e => {
+        console.log("updateValue started")
+        let { keyArray } = this.state;
+        keyArray.push(e.target.value);
+        this.setState({ keyArray: keyArray });
+        console.log('keyArray: ', this.state.keyArray)
     }
 
 
-    // updateValue = e => {
-    //     this.setState({
-    //         keys: e.target.value.pop()
-    //     })
-    // }
     render() {
 
         return (
             <>
                 <div className="main-piano">
-                    <button className="piano-key" value="C" onClick={this.handleChange}>
+                    <button className="piano-key" value="C" onClick={this.updateKey}>
                         C
             </button>
-                    <button className="piano-key" value="D" onClick={this.handleChange}>
+                    <button className="piano-key" value="D" onClick={this.updateKey}>
                         D
             </button>
-                    <button className="piano-key" value="E" onClick={this.handleChange}>
+                    <button className="piano-key" value="E" onClick={this.updateKey}>
                         E
             </button>
-                    <button className="piano-key" value="F" onClick={this.handleChange}>
+                    <button className="piano-key" value="F" onClick={this.updateKey}>
                         F
             </button>
-                    <button className="piano-key" value="G" onClick={this.handleChange}>
+                    <button className="piano-key" value="G" onClick={this.updateKey}>
                         G
             </button>
-                    <button className="piano-key" value="A" onClick={this.handleChange}>
+                    <button className="piano-key" value="A" onClick={this.updateKey}>
                         A
             </button>
-                    <button className="piano-key" value="B" onClick={this.handleChange}>
+                    <button className="piano-key" value="B" onClick={this.updateKey}>
                         B
             </button>
                 </div>
                 <div>
-                    <p className="output-box"> {this.state.keyArray} </p>
+                    <div className="output-box">{this.state.keyArray}</div>
                 </div>
+
             </>
         )
     }
