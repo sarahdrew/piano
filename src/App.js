@@ -1,13 +1,14 @@
 import './App.css';
 import Piano from './components/Piano';
 import TextBox from './components/TextBox';
-import KeyOutput from './components/KeyOutput';
 
 function App() {
   return (
     <div className="App">
+      <header>
+        PIANO
+      </header>
       <Piano />
-      <KeyOutput />
       <TextBox />
     </div>
   );
