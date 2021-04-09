@@ -1,10 +1,12 @@
-body{
+html{
   font-size: 18px;
+  height: 100%;
 }
 
 header{
   text-align: center;
-  margin: 2%
+  margin: 2%;
+  font-size: 30px;
 }
 .main-piano {
   display: flex;
@@ -17,6 +19,7 @@ header{
   height: 170px;
   border-left: 1px solid black;
   border-radius:0 0 3px 3px;
+
 }
 
 .piano-key:hover {
@@ -25,7 +28,7 @@ header{
 }
 
 .playing-key {
-  background-color: lavender;
+  background-color: #9b0bfc
 }
 
 .black-key {
@@ -49,17 +52,30 @@ header{
 
 .textbox, .output-box{
   margin: 3% 5% 2%;
-  border: 1px solid black;
   width: 70%;
   height: 75px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 520px;
+  padding: 20px 20px 11.6px;
+  font-size: 16px;
+  line-height: 1.4em;
+  font-weight: 700;
+  color: #1c2022;
   text-align: left;
-  padding: 1%;
-  text-overflow: initial;
-  word-break: break-word;
-  border-radius: 3px;
-  justify-content: center;
-  box-shadow: 4px 5px #e9e7e78c;
+
 }
+
+.textbox {
+  box-shadow: 4px 5px #f7f74f;
+}
+
+.output-box {
+  box-shadow: 4px 5px #0bfc95;
+
+}
+
+
 .textbox {
   margin-top: 0%;
 }
@@ -81,13 +97,13 @@ header{
 .play-button {
   width: 80px;
   height: 55px;
-  background-color: lavender;
-  border: 2px solid #ceceff;
+  background-color: #5beefe;
+  border: 2px solid #1fdbf0;
   border-radius: 3px;
 
 }
 
 .play-button:hover, .play-button:active{
-  background-color: lightblue;
+  background: #1fdbf0;
 }
 
