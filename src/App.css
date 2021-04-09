@@ -1,4 +1,7 @@
-
+header{
+  text-align: center;
+  margin: 2%
+}
 .main-piano {
   display: flex;
   margin-left: 25%
@@ -12,9 +15,13 @@
   border-radius:0 0 3px 3px;
 }
 
+.piano-key:hover {
+  background: linear-gradient(to bottom,rgb(170, 170, 170) 0%,#fff 70%)
+
+}
+
 .playing-key {
   background-color: lavender;
-  /* background: linear-gradient(to bottom,rgb(170, 170, 170) 0%,#fff 70%) */
 }
 
 .black-key {
@@ -40,5 +47,16 @@
   padding: 1%;
   text-overflow: initial;
   word-break: break-word;
+}
+
+.play-button {
+  width: 80px;
+  height: 55px;
+  background-color: lavender;
+  border: 2px solid #ceceff;
+}
+
+.play-button:hover, .play-button:active{
+  background-color: lightblue;
 }
 

@@ -12,8 +12,8 @@ export default class App extends Component {
     this.setState({ activeKey: key })
   }
 
+  //have the key that has been pressed or called to be played be set as active for one second so that it highlights
   highlightKey(key) {
-
     this.setActiveKey(key)
     const keyTimeout = setTimeout(() => {
       this.setActiveKey(null)

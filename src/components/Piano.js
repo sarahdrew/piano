@@ -11,16 +11,13 @@ export default class Piano extends Component {
 
     //adds to the end of the keyArray that stores the keys on the piano that have been pressed
     updateKey = e => {
-        console.log("updateValue started")
         let { keyArray } = this.state;
         keyArray.push(e.target.value);
         this.setState({ keyArray: keyArray });
-        console.log('keyArray: ', this.state.keyArray)
         this.props.highlightKey(e.target.value);
     }
 
     render() {
-        console.log("activeKey: ", this.props.activeKey)
         return (
             <>
                 <div className="main-piano">
