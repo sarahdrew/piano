@@ -1,22 +1,39 @@
-body {
-  text-align: centter;
-}
 
 .main-piano {
   display: flex;
-  margin: 5% 5% 7%;
+  margin-left: 25%
 }
-.piano-key{
-  padding: 3%;
-  border: 2px solid black;
-  width: 20px;
-  height: 120px;
+.piano-key, .playing-key{
+  padding: 30px;
+  margin-left: -17px;
+  width: 45px;
+  height: 170px;
+  border-left: 1px solid black;
+  border-radius:0 0 3px 3px;
+}
+
+.playing-key {
+  background: linear-gradient(to bottom,rgb(170, 170, 170) 0%,#fff 70%)
+}
+
+.black-key {
+  height: 70px;
+  width: 30px;
+  margin:0 0 0 -1em;
+  z-index:2;
+  border:1px solid #000;
+  border-radius:0 0 3px 3px;
+  background: black
+}
+
+#e-key {
+  padding-right: 48px;
 }
 
 .textbox, .output-box{
   margin: 3% 5% 2%;
   border: 1px solid black;
-  width: 50%;
+  width: 70%;
   height: 75px;
   text-align: left;
   padding: 1%;
