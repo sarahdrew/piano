@@ -49,7 +49,7 @@ export default class Piano extends Component {
             </button>
                 </div>
                 <div className="output-box">
-                    <p>piano keys played: </p>
+                    <p className="piano-label">piano keys played: </p>
                     <div>{this.state.keyArray}</div>
                 </div>
 

@@ -1,10 +1,14 @@
+body{
+  font-size: 18px;
+}
+
 header{
   text-align: center;
   margin: 2%
 }
 .main-piano {
   display: flex;
-  margin-left: 25%
+  justify-content: center;
 }
 .piano-key, .playing-key{
   padding: 30px;
@@ -37,6 +41,11 @@ header{
 #e-key {
   padding-right: 48px;
 }
+.piano-label {
+  margin: 0;
+  font-weight: 600;
+
+}
 
 .textbox, .output-box{
   margin: 3% 5% 2%;
@@ -47,6 +56,26 @@ header{
   padding: 1%;
   text-overflow: initial;
   word-break: break-word;
+  border-radius: 3px;
+  justify-content: center;
+  box-shadow: 4px 5px #e9e7e78c;
+}
+.textbox {
+  margin-top: 0%;
+}
+
+.textbox-label {
+  width: 70%;
+  margin: 3% 5% 2%;
+  word-break: break-word;
+}
+
+.textbox-note {
+  width: 70%;
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 0;
+  margin-left: 5%;
 }
 
 .play-button {
@@ -54,6 +83,8 @@ header{
   height: 55px;
   background-color: lavender;
   border: 2px solid #ceceff;
+  border-radius: 3px;
+
 }
 
 .play-button:hover, .play-button:active{

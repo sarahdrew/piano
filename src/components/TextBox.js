@@ -37,11 +37,11 @@ export default class TextBox extends Component {
         const keys = this.parseKeys(this.state.textboxInput);
         this.beginKeySequence(keys)
         //error validation -- input to textbox must include keys as seen on piano, otherwise throw an alert explaining how to format textbox
-        if (this.state.textboxInput.includes('C' || 'D' || 'E' || 'F' || 'G' || 'A' || 'B')) {
-        }
-        else {
-            alert("Input must be comma delimited string. Please use capital letters that correspond with the keys on the piano and separate using only a comma. Example: D,C,F,G")
-        }
+        // if (this.state.textboxInput.includes('C') || this.state.textBoxKeys.includes('D') || this.state.textBoxKeys('E') || this.state.textBoxKeys.includes('F') || this.state.textBoxKeys.includes('G') || this.state.textBoxKeys('A') || this.state.textBoxKeys.includes('B')) {
+        // }
+        // else {
+        //     alert("Input must be comma delimited string. Please use capital letters that correspond with the keys on the piano and separate using only a comma. Example: D,C,F,G")
+        // }
     }
 
 
@@ -49,7 +49,9 @@ export default class TextBox extends Component {
     render() {
         return (
             <div className="textbox-and-play-container" >
-                <input className="textbox" type="text" placeholder="enter keys of piano" onChange={this.updateKeyInputs.bind(this)}></input>
+                <p className="textbox-label">Type out keys to be played on the piano</p>
+                <p className="textbox-note"> Note: Input must be comma delimited string. Please use capital letters that correspond with the keys on the piano and separate using only a comma. Example: D,C,F,G</p>
+                <input className="textbox" type="text" placeholder="enter keys of piano ex: A,B,C" onChange={this.updateKeyInputs.bind(this)}></input>
                 {/* button will iterate through textbox to play sequence */}
                 <button className="play-button" onClick={this.playKeys.bind(this)} > PLAY</button>
             </div >
