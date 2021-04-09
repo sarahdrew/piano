@@ -1,38 +1,93 @@
-.App {
+body{
+  font-size: 18px;
+}
+
+header{
   text-align: center;
+  margin: 2%
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-piano {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.piano-key, .playing-key{
+  padding: 30px;
+  margin-left: -17px;
+  width: 45px;
+  height: 170px;
+  border-left: 1px solid black;
+  border-radius:0 0 3px 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.piano-key:hover {
+  background: linear-gradient(to bottom,rgb(170, 170, 170) 0%,#fff 70%)
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.playing-key {
+  background-color: lavender;
 }
+
+.black-key {
+  height: 70px;
+  width: 30px;
+  margin:0 0 0 -1em;
+  z-index:2;
+  border:1px solid #000;
+  border-radius:0 0 3px 3px;
+  background: black
+}
+
+#e-key {
+  padding-right: 48px;
+}
+.piano-label {
+  margin: 0;
+  font-weight: 600;
+
+}
+
+.textbox, .output-box{
+  margin: 3% 5% 2%;
+  border: 1px solid black;
+  width: 70%;
+  height: 75px;
+  text-align: left;
+  padding: 1%;
+  text-overflow: initial;
+  word-break: break-word;
+  border-radius: 3px;
+  justify-content: center;
+  box-shadow: 4px 5px #e9e7e78c;
+}
+.textbox {
+  margin-top: 0%;
+}
+
+.textbox-label {
+  width: 70%;
+  margin: 3% 5% 2%;
+  word-break: break-word;
+}
+
+.textbox-note {
+  width: 70%;
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 0;
+  margin-left: 5%;
+}
+
+.play-button {
+  width: 80px;
+  height: 55px;
+  background-color: lavender;
+  border: 2px solid #ceceff;
+  border-radius: 3px;
+
+}
+
+.play-button:hover, .play-button:active{
+  background-color: lightblue;
+}
+
