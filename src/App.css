@@ -13,7 +13,8 @@
 }
 
 .playing-key {
-  background: linear-gradient(to bottom,rgb(170, 170, 170) 0%,#fff 70%)
+  background-color: lavender;
+  /* background: linear-gradient(to bottom,rgb(170, 170, 170) 0%,#fff 70%) */
 }
 
 .black-key {
@@ -38,5 +39,6 @@
   text-align: left;
   padding: 1%;
   text-overflow: initial;
+  word-break: break-word;
 }
 

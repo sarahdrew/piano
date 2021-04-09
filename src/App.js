@@ -8,13 +8,17 @@ export default class App extends Component {
     activeKey: null
   }
 
-  togglePlaying(key) {
-    this.setState({ keyPlaying: !this.state.keyPlaying })
+  setActiveKey(key) {
+    this.setState({ activeKey: key })
   }
 
   highlightKey(key) {
-    const keyTimeout = setTimeout(() => { this.togglePlaying(key) }, 1000);
-    clearTimeout(keyTimeout)
+
+    this.setActiveKey(key)
+    const keyTimeout = setTimeout(() => {
+      this.setActiveKey(null)
+      clearTimeout(keyTimeout)
+    }, 1000);
   }
 
   render() {
@@ -23,8 +27,9 @@ export default class App extends Component {
         <header>
           PIANO
         </header>
-        <Piano togglePlaying={this.togglePlaying} highlightKey={this.highlightKey} />
-        <TextBox />
+        <Piano activeKey={this.state.activeKey} highlightKey={this.highlightKey.bind(this)} />
+        {/* <Piano activeKey={this.state.activeKey} highlightKey={this.highlightKey.bind(this)} /> */}
+        <TextBox setActiveKey={this.setActiveKey.bind(this)} />
       </div>
     );
   }
